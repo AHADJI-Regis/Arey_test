@@ -32,6 +32,7 @@
         <td>{{ $e->classe }}</td>
         <td>
           <a href="{{ route('update', $e->id, false) }}" class="btn btn-warning btn-sm">Modifier</a>
+          <a href="{{ route('delete', $e->id, false) }}" class="btn btn-danger btn-sm" onclick="return confirm('Êtes-vous sûr de vouloir supprimer cet étudiant ?')">Supprimer</a>
         </td>
       </tr>
       @endforeach

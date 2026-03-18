@@ -44,4 +44,10 @@ class EtudiantController extends Controller
 
         return redirect()->route('etudiant')->with('success','Etudiant modifié avec succès !');
     }
+    public function delete_etudiant($id) {
+        $etudiant = Etudiant::findOrFail($id);
+        $etudiant->delete();
+
+        return redirect()->route('etudiant')->with('success','Etudiant supprimé avec succès !');
+    }
 }

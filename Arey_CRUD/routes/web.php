@@ -8,6 +8,7 @@ Route::post('/ajouter/traitement', [EtudiantController::class, 'ajouter_etudiant
 
 Route::get('/update-etudiant/{id}', [EtudiantController::class, 'update_etudiant'])->name('update');
 Route::post('/update/traitement/{id}', [EtudiantController::class, 'update_etudiant_traitement'])->name('update.traitement');
+Route::get('/delete/{id}', [EtudiantController::class, 'delete_etudiant'])->name('delete');
 Route::get('/', function () {
     return redirect()->route('etudiant');
 });
