@@ -3,7 +3,7 @@
 @section('title', 'Modifier étudiant')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-5 animate__animated animate__fadeIn">
   <h2 class="text-center">Modifier un étudiant</h2>
 <div class="container mt-5">
   <h2 class="text-center">Modifier un étudiant</h2>

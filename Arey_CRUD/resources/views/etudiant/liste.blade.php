@@ -14,7 +14,7 @@
 
   <a href="{{ route('ajouter', [], false) }}" class="btn btn-primary mb-3">Ajouter</a>
 
-  <table class="table table-bordered">
+  <table class="table table-bordered animate__animated animate__fadeIn">
     <thead class="table-dark">
       <tr>
         <th>Nom</th>

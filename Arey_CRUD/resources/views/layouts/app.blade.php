@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('title', 'Etudiants')</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <script>
     const theme = localStorage.getItem('theme') || 'light';
     document.documentElement.setAttribute('data-bs-theme', theme);
@@ -12,7 +13,7 @@
 </head>
 <body>
 <div class="container mt-5">
-    <button id="theme-toggle">☀️ / 🌙</button>
+    <button id="theme-toggle" class ="animate__animated animate__bounce">☀️ / 🌙</button>
   <script>
     document.getElementById('theme-toggle').onclick = () => {
       const next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';

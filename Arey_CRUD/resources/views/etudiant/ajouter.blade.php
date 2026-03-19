@@ -3,7 +3,7 @@
 @section('title', 'Ajouter étudiant')
 
 @section('content')
-<div class="container mt-5">
+<div class="container mt-5" class="animate__animated animate__fadeIn">
   <h2 class="text-center">Ajouter un étudiant</h2>
 
   @if(session('success'))
