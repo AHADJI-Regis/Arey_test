@@ -5,9 +5,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>@yield('title', 'Etudiants')</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script>
+    const theme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-bs-theme', theme);
+  </script>
 </head>
 <body>
 <div class="container mt-5">
+    <button id="theme-toggle">☀️ / 🌙</button>
+  <script>
+    document.getElementById('theme-toggle').onclick = () => {
+      const next = document.documentElement.getAttribute('data-bs-theme') === 'dark' ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-bs-theme', next);
+      localStorage.setItem('theme', next);
+    };
+  </script>
   @yield('content')
 </div>
 </body>
