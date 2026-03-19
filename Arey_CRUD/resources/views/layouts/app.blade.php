@@ -12,7 +12,7 @@
   </script>
 </head>
 <body>
-<div class="container mt-5">
+<div class="container mt-5 animate__animated animate__fadeIn animate__slow  animate__repeat-1">
     <button id="theme-toggle" class ="animate__animated animate__bounce">☀️ / 🌙</button>
   <script>
     document.getElementById('theme-toggle').onclick = () => {

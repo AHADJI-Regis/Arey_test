@@ -10,5 +10,16 @@ Route::get('/update-etudiant/{id}', [EtudiantController::class, 'update_etudiant
 Route::post('/update/traitement/{id}', [EtudiantController::class, 'update_etudiant_traitement'])->name('update.traitement');
 Route::get('/delete/{id}', [EtudiantController::class, 'delete_etudiant'])->name('delete');
 Route::get('/', function () {
-    return redirect()->route('etudiant');
+    return redirect('/etudiant');
+});
+Route::get('/debug', function() {
+    dd([
+        'HTTP_HOST' => $_SERVER['HTTP_HOST'],
+        'SERVER_NAME' => $_SERVER['SERVER_NAME'],
+        'SERVER_PORT' => $_SERVER['SERVER_PORT'],
+        'APP_URL' => env('APP_URL'),
+        'config.app.url' => config('app.url'),
+        'request->root()' => request()->root(),
+        'request->url()' => request()->url(),
+    ]);
 });
